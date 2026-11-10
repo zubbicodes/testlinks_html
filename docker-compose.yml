@@ -1,0 +1,16 @@
+services:
+  damian-website:
+    build:
+      context: .
+      dockerfile: Dockerfile.damian
+    ports:
+      - "8081:80"
+    restart: unless-stopped
+
+  nationwide-website:
+    build:
+      context: .
+      dockerfile: Dockerfile.nationwide
+    ports:
+      - "8082:80"
+    restart: unless-stopped
